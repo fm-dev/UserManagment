@@ -8,6 +8,9 @@ class Dashboard extends Controller
 {
     //
     public function index(){
-        return view('pages.dashboard');
+        return view('pages.file');
+    }
+    public function TambahData(){
+        return view('pages.tambah_file');
     }
 }

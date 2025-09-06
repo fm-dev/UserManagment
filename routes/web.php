@@ -20,6 +20,7 @@ use App\Http\Controllers\Dashboard;
 Route::get('/', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'loginWeb']);
 Route::get('/Dashboard', [Dashboard::class, 'index'])->name('Dashboard');
+Route::get('/TambahFile', [Dashboard::class, 'TambahData'])->name('TambahData');
 
 
 
