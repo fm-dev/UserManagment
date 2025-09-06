@@ -5,9 +5,9 @@
 
                 <!-- Content Wrapper START -->
                 <div class="main-content">
-                    <div class="row col-12">
+                    <div class="row ">
                         <div class="col-md-12 col-lg-12 ">
-                            <div class="card bg-secondary w-100">
+                            <div class="card bg-secondary w-full">
                                 <div class="card-body">
                                     <div class="media align-items-center">
                                         <div class="avatar avatar-lg avatar-image">
@@ -24,7 +24,6 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-lg-12">
-                            
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -33,9 +32,9 @@
                                     <div class="m-t-10">
                                         <div class="card">
                                             <div class = "card-body">
-                                                <div class="w-100   ">
-                                                    <a href="/TambahFile" class="btn btn-secondary m-r-5 mb-2"><i class="anticon anticon-file-add"></i> Tambah data</a>
-                                                    <table id="data-table" class="table">
+                                                <a href="/TambahFile" class="btn btn-secondary m-r-5 mb-2"><i class="anticon anticon-file-add"></i> Tambah data</a>
+                                                <div class="w-100 overflow-auto">
+                                                    <table id="data-table" class="table ">
                                                         <thead>
                                                             <tr>
                                                                 <th>Name file</th>
@@ -56,7 +55,6 @@
                                                                 <td class = "gap-2">
                                                                     <button class="btn btn-secondary btn-tone m-r-5 btn-sm">
                                                                         <i class="anticon anticon-cloud-download"></i>
-                                                                        Download
                                                                     </button>
                                                                     <button class="btn btn-danger btn-tone m-r-5 btn-sm">
                                                                         <i class="anticon anticon-delete"></i>

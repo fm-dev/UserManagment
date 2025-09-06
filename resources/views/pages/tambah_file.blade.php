@@ -7,7 +7,7 @@
                 <div class="main-content">
                     <div class="row">
                         <div class="col-md-12 col-lg-12">
-                            <div class="card bg-secondary">
+                            <div class="card bg-secondary w-full">
                                 <div class="card-body">
                                     <div class="media align-items-center">
                                         <div class="avatar avatar-lg avatar-image">
