@@ -33,8 +33,8 @@
                                         <div class="card">
                                             <div class = "card-body">
                                                 <a href="/TambahFile" class="btn btn-secondary m-r-5 mb-2"><i class="anticon anticon-file-add"></i> Tambah data</a>
-                                                <div class="w-100 overflow-auto">
-                                                    <table id="data-table" class="table ">
+                                                <div class="w-100 overflow-auto table-responsive">
+                                                    <table class="table ">
                                                         <thead>
                                                             <tr>
                                                                 <th>Name file</th>
@@ -66,6 +66,16 @@
                                                             </tr>
                                                         </tbody>
                                                     </table>
+                                                </div>
+                                                <div class="d-flex gap-2 mt-2">
+                                                    <span class="badge badge-pill badge-default">10 of 100</span>
+                                                    <button class="badge badge-pill badge-magenta"><i class="anticon anticon-left"></i></button>
+                                                    <button class="badge badge-pill badge-magenta">1</button>
+                                                    <button class="badge badge-pill badge-magenta">2</button>
+                                                    <button class="badge badge-pill badge-magenta">3</button>
+                                                    <button class="badge badge-pill badge-magenta">4</button>
+                                                    <button class="badge badge-pill badge-magenta">5</button>
+                                                    <button class="badge badge-pill badge-magenta"><i class="anticon anticon-right"></i></button>
                                                 </div>
                                             </div>
                                         </div>
