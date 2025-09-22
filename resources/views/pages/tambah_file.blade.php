@@ -35,14 +35,14 @@
                                             <div class = "card-body">
                                                 <form action="/SimpanFile" method="post"   enctype="multipart/form-data">
                                                     @csrf
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="col-md-12 col-lg-6">
+                                                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+                                                        <div class="col-12 col-md-12 col-lg-6">
                                                             <label for="basic-url">Nama File</label>
                                                             <div class="input-group mb-3">
                                                                 <input type="text" name="nama_file" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12 col-lg-6">
+                                                        <div class="col-12 col-md-12 col-lg-6">
                                                             <label for="basic-url">Upload File</label>
                                                             <div class="custom-file">
                                                                 <input type="file" name="file" class="" id="customFile">
