@@ -21,6 +21,9 @@ Route::get('/', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'loginWeb']);
 Route::get('/Dashboard', [Dashboard::class, 'index'])->name('Dashboard');
 Route::get('/TambahFile', [Dashboard::class, 'TambahData'])->name('TambahData');
+Route::post('/SimpanFile', [Dashboard::class, 'SimpanData'])->name('SimpanData');
+Route::get('/file/download/{id}', [Dashboard::class, 'download'])->name('file.download');
+Route::delete('/file/{id}', [Dashboard::class, 'destroy'])->name('file.destroy');
 
 
 

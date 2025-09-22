@@ -44,26 +44,37 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>ktp_fajri</td>
-                                                                <td>
-                                                                    Dea ayu ananda
-                                                                </td>
-                                                                <td>
-                                                                    <span class="badge badge-pill badge-info">22 agustus 2022</span>
-                                                                </td>
-                                                                <td class = "gap-2">
-                                                                    <button class="btn btn-secondary btn-tone m-r-5 btn-sm">
-                                                                        <i class="anticon anticon-cloud-download"></i>
-                                                                    </button>
-                                                                    <button class="btn btn-danger btn-tone m-r-5 btn-sm">
-                                                                        <i class="anticon anticon-delete"></i>
-                                                                    </button>
-                                                                    <button class="btn btn-warning btn-tone m-r-5 btn-sm">
-                                                                        <i class="anticon anticon-edit"></i>
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
+                                                            @forelse($data as $file)
+                                                                <tr>
+                                                                    <td>{{$file->label_file}}</td>
+                                                                    <td>
+                                                                        {{$file->created_by}}
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="badge badge-pill badge-info">{{ \Carbon\Carbon::parse($file->created_at)->translatedFormat('d F Y') }}</span>
+                                                                    </td>
+                                                                    <td class = "gap-2 d-flex">
+                                                                        <button class="btn btn-secondary btn-tone m-r-5 btn-sm">
+                                                                            <a href="{{ route('file.download', $file->id) }}"><i class="anticon anticon-cloud-download"></i></a>
+                                                                        </button>
+                                                                        <div>
+                                                                            <form action="{{ route('file.destroy', $file->id) }}" method="POST" onsubmit="return confirm('Yakin mau hapus file ini?')">
+                                                                                    @csrf
+                                                                                    @method('DELETE')
+                                                                                    <button type="submit" class="btn btn-sm btn-danger"><i class="anticon anticon-delete"></i></button>
+                                                                            </form>
+                                                                        </div>
+                                                                        <button class="btn btn-warning btn-tone m-r-5 btn-sm">
+                                                                            <i class="anticon anticon-edit"></i>
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                            @empty
+                                                                <tr>
+                                                                    <td colspan="6" class="text-center">Belum ada file</td>
+                                                                </tr>
+                                                            @endforelse
+                                                            
                                                         </tbody>
                                                     </table>
                                                 </div>
