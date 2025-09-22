@@ -45,8 +45,7 @@
                                                         <div class="col-md-12 col-lg-6">
                                                             <label for="basic-url">Upload File</label>
                                                             <div class="custom-file">
-                                                                <input type="file" name="file" class="custom-file-input" id="customFile">
-                                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                                                <input type="file" name="file" class="" id="customFile">
                                                             </div>
                                                         </div>
                                                     </div>
