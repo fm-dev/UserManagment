@@ -33,27 +33,18 @@
                                         <div class="card">
                                             <div class = "card-body">
                                                 <a href="/TambahFile" class="btn btn-secondary m-r-5 mb-2"><i class="anticon anticon-file-add"></i> Tambah data</a>
-                                                <div class="w-100 overflow-auto table-responsive">
-                                                    <table class="table ">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name file</th>
-                                                                <th>created by</th>
-                                                                <th>created date</th>
-                                                                <th>action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            @forelse($data as $file)
-                                                                <tr>
-                                                                    <td>{{$file->label_file}}</td>
-                                                                    <td>
-                                                                        {{$file->created_by}}
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="badge badge-pill badge-info">{{ \Carbon\Carbon::parse($file->created_at)->translatedFormat('d F Y') }}</span>
-                                                                    </td>
-                                                                    <td class = "gap-2 d-flex">
+                                                <div>
+                                                    <div class="file-wrapper m-t-20">
+                                                         @forelse($data as $file)
+                                                        <div class="file">
+                                                            <div class="media align-items-center">
+                                                                <div class="m-r-15 font-size-30">
+                                                                    <i class="anticon anticon-folder text-warning"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <h6 class="mb-0 text-truncate"> {{ Str::limit($file->label_file, 20) }}</h6>
+                                                                    <span class="font-size-13 text-muted">{{$file->created_by}}</span>
+                                                                    <div class = "gap-2 d-flex">
                                                                         <button class="btn btn-secondary btn-tone m-r-5 btn-sm">
                                                                             <a href="{{ route('file.download', $file->id) }}"><i class="anticon anticon-cloud-download"></i></a>
                                                                         </button>
@@ -64,30 +55,19 @@
                                                                                     <button type="submit" class="btn btn-sm btn-danger"><i class="anticon anticon-delete"></i></button>
                                                                             </form>
                                                                         </div>
-                                                                        <button class="btn btn-warning btn-tone m-r-5 btn-sm">
+                                                                        <!-- <button class="btn btn-warning btn-tone m-r-5 btn-sm">
                                                                             <i class="anticon anticon-edit"></i>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
-                                                            @empty
-                                                                <tr>
-                                                                    <td colspan="6" class="text-center">Belum ada file</td>
-                                                                </tr>
-                                                            @endforelse
-                                                            
-                                                        </tbody>
-                                                    </table>
+                                                                        </button> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                         @empty
+                                                         <p class="text-center">Belum ada file</p>
+                                                         @endforelse
+                                                    </div>
                                                 </div>
-                                                <div class="d-flex gap-2 mt-2">
-                                                    <span class="badge badge-pill badge-default">10 of 100</span>
-                                                    <button class="badge badge-pill badge-magenta"><i class="anticon anticon-left"></i></button>
-                                                    <button class="badge badge-pill badge-magenta">1</button>
-                                                    <button class="badge badge-pill badge-magenta">2</button>
-                                                    <button class="badge badge-pill badge-magenta">3</button>
-                                                    <button class="badge badge-pill badge-magenta">4</button>
-                                                    <button class="badge badge-pill badge-magenta">5</button>
-                                                    <button class="badge badge-pill badge-magenta"><i class="anticon anticon-right"></i></button>
-                                                </div>
+                                                
                                             </div>
                                         </div>
 
